@@ -324,6 +324,42 @@
             background: #f3e8ff;
             color: #6b21a8;
         }
+
+        /* Image Gallery Styles */
+        .project-images {
+            margin-top: 30px;
+        }
+
+        .project-images h4 {
+            color: #1e3a8a;
+            margin-bottom: 20px;
+            font-size: 1.2em;
+        }
+
+        .image-container {
+            margin-bottom: 25px;
+        }
+
+        .image-container img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+            margin-bottom: 10px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .image-container img:hover {
+            transform: scale(1.02);
+        }
+
+        .image-caption {
+            text-align: center;
+            color: #666;
+            font-size: 0.9em;
+            font-style: italic;
+            margin-top: 8px;
+        }
     </style>
 </head>
 <body>
@@ -334,8 +370,8 @@
         <div class="contact-links">
             <a href="mailto:husseinreslan265@gmail.com">📧 Email</a>
             <a href="tel:+96176760246">📱 Phone</a>
-            <a href="https://linkedin.com/in/hussein-reslan" target="_blank">💼 LinkedIn</a>
-            <a href="https://github.com/hussein-reslan" target="_blank">💻 GitHub</a>
+            <a href="https://www.linkedin.com/in/hsen-reslan-ba4284314/" target="_blank">💼 LinkedIn</a>
+            <a href="https://github.com/HsenR" target="_blank">💻 GitHub</a>
         </div>
     </header>
 
@@ -491,6 +527,21 @@
                     <span class="badge blue">Threat Intelligence</span>
                     <span class="badge purple">AWS EC2</span>
                 </div>
+
+                <!-- Project Images -->
+                <div class="project-images">
+                    <h4>📊 Project Visualizations:</h4>
+                    
+                    <div class="image-container">
+                        <img src="images/FYP-Archi.png" alt="System Architecture Diagram" onclick="window.open(this.src, '_blank')">
+                        <p class="image-caption">Six-layer honeypot architecture: Attack Surface → Honeypot → Network Detection → Log Collection → Enrichment → Visualization</p>
+                    </div>
+
+                    <div class="image-container">
+                        <img src="images/HASSH.png" alt="HASSH Fingerprint Distribution" onclick="window.open(this.src, '_blank')">
+                        <p class="image-caption">HASSH Fingerprint Distribution - 75.93% of attacks from single attack tool, revealing coordinated botnet infrastructure</p>
+                    </div>
+                </div>
             </div>
 
             <!-- Project 2: OPNsense -->
@@ -516,6 +567,21 @@
                     <span class="badge">Suricata IPS</span>
                     <span class="badge blue">Network Segmentation</span>
                     <span class="badge blue">VPN</span>
+                </div>
+
+                <!-- Project Images -->
+                <div class="project-images">
+                    <h4>📊 Network Architecture:</h4>
+                    
+                    <div class="image-container">
+                        <img src="images/OPN-Sense-Topo.png" alt="OPNsense Network Topology" onclick="window.open(this.src, '_blank')">
+                        <p class="image-caption">Multi-zone network topology with LAN, DMZ, and WAN segmentation</p>
+                    </div>
+
+                    <div class="image-container">
+                        <img src="images/OPNSense-Main.png" alt="OPNsense Dashboard" onclick="window.open(this.src, '_blank')">
+                        <p class="image-caption">OPNsense firewall dashboard showing real-time traffic monitoring and security status</p>
+                    </div>
                 </div>
             </div>
 
@@ -543,6 +609,16 @@
                     <span class="badge blue">Windows Server</span>
                     <span class="badge purple">PowerShell</span>
                 </div>
+
+                <!-- Project Images -->
+                <div class="project-images">
+                    <h4>📊 System Architecture:</h4>
+                    
+                    <div class="image-container">
+                        <img src="images/SysAdmin-Topo.png" alt="Active Directory Topology" onclick="window.open(this.src, '_blank')">
+                        <p class="image-caption">Enterprise Active Directory topology with domain controllers, DHCP failover, and multi-OS integration</p>
+                    </div>
+                </div>
             </div>
 
             <!-- Project 4: Wazuh -->
@@ -566,6 +642,21 @@
                     <span class="badge">Wazuh HIDS</span>
                     <span class="badge blue">Custom Rules</span>
                     <span class="badge blue">SIEM Operations</span>
+                </div>
+
+                <!-- Project Images -->
+                <div class="project-images">
+                    <h4>📊 Security Monitoring:</h4>
+                    
+                    <div class="image-container">
+                        <img src="images/Wazuh-Dash.png" alt="Wazuh Security Dashboard" onclick="window.open(this.src, '_blank')">
+                        <p class="image-caption">Wazuh security dashboard showing real-time alerts and security event analysis</p>
+                    </div>
+
+                    <div class="image-container">
+                        <img src="images/Wazuh-data.png" alt="Wazuh Data Analysis" onclick="window.open(this.src, '_blank')">
+                        <p class="image-caption">Security event data analysis showing attack patterns and threat detection metrics</p>
+                    </div>
                 </div>
             </div>
 
@@ -665,12 +756,12 @@
 
                 <div class="contact-item">
                     <h3>💼 LinkedIn</h3>
-                    <a href="https://linkedin.com/in/hussein-reslan" target="_blank">linkedin.com/in/hussein-reslan</a>
+                    <a href="https://www.linkedin.com/in/hsen-reslan-ba4284314/" target="_blank">linkedin.com/in/hsen-reslan-ba4284314/</a>
                 </div>
 
                 <div class="contact-item">
                     <h3>💻 GitHub</h3>
-                    <a href="https://github.com/hussein-reslan" target="_blank">github.com/hussein-reslan</a>
+                    <a href="https://github.com/HsenR" target="_blank">github.com/HsenR</a>
                 </div>
             </div>
 
