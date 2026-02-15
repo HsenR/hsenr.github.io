@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hussein Reslan - Cybersecurity Analyst specializing in SOC operations, threat intelligence, and security monitoring">
+    <title>Hussein Reslan | Cybersecurity Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+        }
+
+        /* Header Section */
+        header {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        header .tagline {
+            font-size: 1.3em;
+            opacity: 0.95;
+            margin-bottom: 20px;
+        }
+
+        header .contact-links {
+            margin-top: 20px;
+        }
+
+        header .contact-links a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.1em;
+            border-bottom: 2px solid transparent;
+            transition: border-color 0.3s;
+        }
+
+        header .contact-links a:hover {
+            border-bottom: 2px solid white;
+        }
+
+        /* Navigation */
+        nav {
+            background: #1e293b;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        nav ul {
+            list-style: none;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #3b82f6;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* Section Styles */
+        section {
+            background: white;
+            margin-bottom: 40px;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+        }
+
+        section h2 {
+            font-size: 2.2em;
+            color: #1e3a8a;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #3b82f6;
+            padding-bottom: 10px;
+        }
+
+        /* About Section */
+        .about-content {
+            font-size: 1.1em;
+            line-height: 1.8;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .skill-category {
+            background: #f0f9ff;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #3b82f6;
+        }
+
+        .skill-category h3 {
+            color: #1e3a8a;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+
+        .skill-category ul {
+            list-style: none;
+        }
+
+        .skill-category ul li {
+            padding: 5px 0;
+            color: #555;
+        }
+
+        .skill-category ul li:before {
+            content: "▹ ";
+            color: #3b82f6;
+            font-weight: bold;
+        }
+
+        /* Projects Section */
+        .project-card {
+            background: #fafafa;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            padding: 30px;
+            margin-bottom: 30px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        .project-card h3 {
+            color: #1e3a8a;
+            font-size: 1.8em;
+            margin-bottom: 10px;
+        }
+
+        .project-card .tech-stack {
+            color: #3b82f6;
+            font-weight: 600;
+            margin-bottom: 15px;
+            font-size: 0.95em;
+        }
+
+        .project-card .highlights {
+            margin-top: 20px;
+        }
+
+        .project-card .highlights h4 {
+            color: #1e3a8a;
+            margin-bottom: 10px;
+        }
+
+        .project-card .highlights ul {
+            list-style: none;
+        }
+
+        .project-card .highlights ul li {
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .project-card .highlights ul li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #10b981;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+
+        /* Stats */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .stat-box {
+            background: linear-gradient(135deg, #3b82f6 0%, #1e3a8a 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .stat-box .number {
+            font-size: 2.5em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .stat-box .label {
+            font-size: 1em;
+            opacity: 0.9;
+        }
+
+        /* Contact Section */
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .contact-item {
+            background: #f0f9ff;
+            padding: 25px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .contact-item h3 {
+            color: #1e3a8a;
+            margin-bottom: 10px;
+        }
+
+        .contact-item a {
+            color: #3b82f6;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .contact-item a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            background: #1e293b;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 60px;
+        }
+
+        footer p {
+            opacity: 0.8;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+
+            header .tagline {
+                font-size: 1em;
+            }
+
+            nav ul li {
+                display: block;
+                margin: 10px 0;
+            }
+
+            section {
+                padding: 25px;
+            }
+
+            .skills-grid, .stats-grid, .contact-info {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Badge Styles */
+        .badge {
+            display: inline-block;
+            background: #dcfce7;
+            color: #166534;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: 600;
+            margin-right: 8px;
+            margin-bottom: 8px;
+        }
+
+        .badge.blue {
+            background: #dbeafe;
+            color: #1e40af;
+        }
+
+        .badge.purple {
+            background: #f3e8ff;
+            color: #6b21a8;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Hussein Ali Reslan</h1>
+        <p class="tagline">Cybersecurity Analyst | SOC Operations | Threat Intelligence</p>
+        <p>Beirut, Lebanon 🇱🇧</p>
+        <div class="contact-links">
+            <a href="mailto:husseinreslan265@gmail.com">📧 Email</a>
+            <a href="tel:+96176760246">📱 Phone</a>
+            <a href="https://linkedin.com/in/hussein-reslan" target="_blank">💼 LinkedIn</a>
+            <a href="https://github.com/hussein-reslan" target="_blank">💻 GitHub</a>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#certifications">Certifications</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <!-- About Section -->
+        <section id="about">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <p>I'm a <strong>cybersecurity professional</strong> with hands-on experience in <strong>Security Operations Center (SOC) workflows</strong>, <strong>threat intelligence extraction</strong>, and <strong>defensive security engineering</strong>.</p>
+                
+                <p style="margin-top: 20px;">My expertise lies in deploying and managing <strong>security monitoring infrastructure</strong> including SIEM platforms, intrusion detection systems, honeypots, and network security tools. I've captured and analyzed over <strong>201,000 real-world cyber attacks</strong>, revealing critical insights into attacker behavior, automation patterns, and post-compromise activities.</p>
+
+                <p style="margin-top: 20px;">I specialize in:</p>
+                <ul style="margin-top: 10px; margin-left: 40px; line-height: 2;">
+                    <li><strong>Threat Intelligence:</strong> Behavioral analysis, IOC extraction, attack pattern recognition</li>
+                    <li><strong>Security Monitoring:</strong> SIEM operations, log analysis, alert triage, incident detection</li>
+                    <li><strong>Network Security:</strong> IDS/IPS deployment, firewall administration, traffic analysis</li>
+                    <li><strong>System Hardening:</strong> Active Directory, Linux/Windows server security, access control</li>
+                </ul>
+            </div>
+
+            <!-- Key Stats -->
+            <div class="stats-grid">
+                <div class="stat-box">
+                    <div class="number">201K+</div>
+                    <div class="label">Attack Events Captured</div>
+                </div>
+                <div class="stat-box">
+                    <div class="number">99.5%</div>
+                    <div class="label">Automation Rate Detected</div>
+                </div>
+                <div class="stat-box">
+                    <div class="number">6</div>
+                    <div class="label">Major Security Projects</div>
+                </div>
+                <div class="stat-box">
+                    <div class="number">100%</div>
+                    <div class="label">Honeypot Containment</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills">
+            <h2>Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>🛡️ Security Tools</h3>
+                    <ul>
+                        <li>SIEM: Elasticsearch, Kibana, Wazuh</li>
+                        <li>IDS/IPS: Suricata, Snort, Zeek</li>
+                        <li>Honeypots: Cowrie, T-Pot</li>
+                        <li>Firewalls: OPNsense, pfSense, UFW</li>
+                        <li>Vulnerability Scanning: Nmap, Nikto</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h3>🖥️ System Administration</h3>
+                    <ul>
+                        <li>Windows Server 2022 (AD, GPO)</li>
+                        <li>Ubuntu/CentOS Linux</li>
+                        <li>PowerShell & Bash scripting</li>
+                        <li>DHCP, DNS, Group Policy</li>
+                        <li>Service hardening & monitoring</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h3>🌐 Networking & Security</h3>
+                    <ul>
+                        <li>TCP/IP, VLANs, routing, NAT</li>
+                        <li>Network segmentation (LAN/DMZ/WAN)</li>
+                        <li>VPN (OpenVPN)</li>
+                        <li>Firewall policy design</li>
+                        <li>Packet analysis (Wireshark)</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h3>💻 Programming</h3>
+                    <ul>
+                        <li>Python (automation, parsing)</li>
+                        <li>HTML, CSS, JavaScript</li>
+                        <li>Flask web framework</li>
+                        <li>SQL & NoSQL databases</li>
+                        <li>Git version control</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h3>🔍 Threat Intelligence</h3>
+                    <ul>
+                        <li>HASSH fingerprinting</li>
+                        <li>GeoIP & ASN analysis</li>
+                        <li>IOC extraction & correlation</li>
+                        <li>MITRE ATT&CK mapping</li>
+                        <li>Malware behavioral analysis</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h3>☁️ Cloud & Virtualization</h3>
+                    <ul>
+                        <li>AWS EC2 deployment</li>
+                        <li>Security group configuration</li>
+                        <li>VMware, VirtualBox</li>
+                        <li>GNS3 network simulation</li>
+                        <li>Infrastructure as Code basics</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects">
+            <h2>Featured Projects</h2>
+
+            <!-- Project 1: Honeypot -->
+            <div class="project-card">
+                <h3>🍯 SSH Honeypot & Threat Intelligence Platform</h3>
+                <p class="tech-stack">Technologies: Cowrie | Suricata | Elasticsearch | Kibana | AWS EC2 | Python | HASSH</p>
+                <p>Deployed production-grade SSH honeypot infrastructure on AWS to capture and analyze real-world cyber attacks. Built comprehensive threat intelligence pipeline from attack capture to defensive hardening.</p>
+                
+                <div class="highlights">
+                    <h4>Key Achievements:</h4>
+                    <ul>
+                        <li><strong>201,551 attack events</strong> captured from 15+ malicious IPs over 21-day deployment</li>
+                        <li>Identified <strong>99.5% automation rate</strong> in modern SSH attacks through behavioral analysis</li>
+                        <li>Discovered <strong>cryptomining reconnaissance patterns</strong> in 80% of post-compromise commands</li>
+                        <li>Revealed <strong>DigitalOcean infrastructure abuse</strong> for coordinated botnet activity</li>
+                        <li>Implemented <strong>HASSH fingerprinting</strong> for tracking attack tools across IP rotation</li>
+                        <li>Achieved <strong>100% containment</strong> with zero honeypot escape attempts</li>
+                        <li>Built 6-layer security architecture: Attack Surface → Honeypot → IDS → Log Collection → Enrichment → Visualization</li>
+                    </ul>
+                </div>
+
+                <div style="margin-top: 20px;">
+                    <span class="badge">Elasticsearch</span>
+                    <span class="badge">Kibana</span>
+                    <span class="badge">Suricata</span>
+                    <span class="badge blue">HASSH Fingerprinting</span>
+                    <span class="badge blue">Threat Intelligence</span>
+                    <span class="badge purple">AWS EC2</span>
+                </div>
+            </div>
+
+            <!-- Project 2: OPNsense -->
+            <div class="project-card">
+                <h3>🔥 Enterprise Network Security with OPNsense Firewall</h3>
+                <p class="tech-stack">Technologies: OPNsense | Suricata IDS/IPS | OpenVPN | NAT | Network Segmentation</p>
+                <p>Designed and implemented enterprise-grade network security architecture with multi-zone segmentation, stateful firewall policies, VPN remote access, and intrusion detection/prevention.</p>
+                
+                <div class="highlights">
+                    <h4>Key Achievements:</h4>
+                    <ul>
+                        <li>Deployed <strong>multi-zone architecture</strong>: LAN, DMZ, WAN with enforced security policies</li>
+                        <li>Configured <strong>20+ firewall rules</strong> implementing least-privilege access control</li>
+                        <li>Enabled <strong>Suricata IDS/IPS with 50,000+ rules</strong> for signature-based detection</li>
+                        <li>Validated IPS blocking of EICAR patterns and simulated SQL injection attempts</li>
+                        <li>Implemented <strong>OpenVPN remote access</strong> with certificate-based authentication</li>
+                        <li>Set up comprehensive logging for firewall events, IDS alerts, and VPN connections</li>
+                    </ul>
+                </div>
+
+                <div style="margin-top: 20px;">
+                    <span class="badge">OPNsense</span>
+                    <span class="badge">Suricata IPS</span>
+                    <span class="badge blue">Network Segmentation</span>
+                    <span class="badge blue">VPN</span>
+                </div>
+            </div>
+
+            <!-- Project 3: Active Directory -->
+            <div class="project-card">
+                <h3>🏢 Active Directory & Windows Server Security Lab</h3>
+                <p class="tech-stack">Technologies: Windows Server 2022 | Active Directory | Group Policy | DHCP Failover | PowerShell</p>
+                <p>Built enterprise-scale Active Directory environment with high availability, automated configuration management, security hardening, and multi-OS integration.</p>
+                
+                <div class="highlights">
+                    <h4>Key Achievements:</h4>
+                    <ul>
+                        <li>Deployed full AD infrastructure: Domain Services, DHCP failover, DNS, centralized auth</li>
+                        <li>Implemented <strong>15+ Group Policy Objects</strong> for password policies, audit logging, software restrictions</li>
+                        <li>Configured <strong>DHCP failover</strong> with 60%/40% load balancing for high availability</li>
+                        <li>Enabled SNMP monitoring for real-time server health metrics</li>
+                        <li>Automated backups using PowerShell for AD database and system state</li>
+                        <li>Enforced strong security policies: 12+ char passwords, account lockouts, audit logging</li>
+                    </ul>
+                </div>
+
+                <div style="margin-top: 20px;">
+                    <span class="badge">Active Directory</span>
+                    <span class="badge">Group Policy</span>
+                    <span class="badge blue">Windows Server</span>
+                    <span class="badge purple">PowerShell</span>
+                </div>
+            </div>
+
+            <!-- Project 4: Wazuh -->
+            <div class="project-card">
+                <h3>🔍 Wazuh Host-Based Intrusion Detection System</h3>
+                <p class="tech-stack">Technologies: Wazuh Manager/Agent | OpenSearch | Custom Detection Rules | Apache</p>
+                <p>Deployed Wazuh HIDS/SIEM platform for endpoint security monitoring, log analysis, and custom rule development for web attacks and authentication abuse detection.</p>
+                
+                <div class="highlights">
+                    <h4>Key Achievements:</h4>
+                    <ul>
+                        <li>Deployed full Wazuh stack: Manager, Indexer, Dashboard, agents across 3 Linux hosts</li>
+                        <li>Developed <strong>8 custom detection rules</strong> for SQL injection, directory traversal, XSS</li>
+                        <li>Created authentication abuse detections for brute-force and suspicious sudo usage</li>
+                        <li>Built <strong>5 security dashboards</strong> for real-time alert visualization</li>
+                        <li>Integrated File Integrity Monitoring for critical system directories</li>
+                    </ul>
+                </div>
+
+                <div style="margin-top: 20px;">
+                    <span class="badge">Wazuh HIDS</span>
+                    <span class="badge blue">Custom Rules</span>
+                    <span class="badge blue">SIEM Operations</span>
+                </div>
+            </div>
+
+            <!-- Project 5: Web Security -->
+            <div class="project-card">
+                <h3>🌐 Web Application Security Assessment</h3>
+                <p class="tech-stack">Technologies: Burp Suite | Nmap | Gobuster | Amass | Sublist3r | SSL Labs</p>
+                <p>Conducted comprehensive security assessment of inDriver.com platform using reconnaissance, vulnerability scanning, and attack surface analysis.</p>
+                
+                <div class="highlights">
+                    <h4>Key Achievements:</h4>
+                    <ul>
+                        <li>Discovered <strong>80+ subdomains</strong> through automated enumeration</li>
+                        <li>Identified high-value targets including admin and API subdomains</li>
+                        <li>Analyzed TLS/SSL configuration and identified cipher weaknesses</li>
+                        <li>Conducted directory brute-forcing revealing hidden endpoints</li>
+                        <li>Documented findings: publicly accessible admin subdomain, outdated TLS ciphers</li>
+                    </ul>
+                </div>
+
+                <div style="margin-top: 20px;">
+                    <span class="badge">Vulnerability Assessment</span>
+                    <span class="badge blue">OSINT</span>
+                    <span class="badge blue">Reconnaissance</span>
+                </div>
+            </div>
+
+            <!-- Project 6: Linux Hardening -->
+            <div class="project-card">
+                <h3>🐧 Linux Server Hardening & Web Services Security</h3>
+                <p class="tech-stack">Technologies: Ubuntu Server | Apache | UFW | SSH | GeoIP | Let's Encrypt</p>
+                <p>Hardened Linux server infrastructure with web services, implemented defense-in-depth security controls, and achieved A+ SSL rating.</p>
+                
+                <div class="highlights">
+                    <h4>Key Achievements:</h4>
+                    <ul>
+                        <li>Deployed Apache with <strong>Let's Encrypt SSL/TLS</strong> achieving A+ rating</li>
+                        <li>SSH hardening: key-based auth only, root login disabled, rate limiting</li>
+                        <li>UFW firewall with default deny, service-specific allows, geo-blocking</li>
+                        <li>SNMP monitoring for real-time performance metrics</li>
+                        <li>Automated backups with cron jobs and integrity verification</li>
+                        <li>Reduced attack surface by 90% through service minimization</li>
+                    </ul>
+                </div>
+
+                <div style="margin-top: 20px;">
+                    <span class="badge">Linux Hardening</span>
+                    <span class="badge">Apache Security</span>
+                    <span class="badge blue">SSH Security</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications Section -->
+        <section id="certifications">
+            <h2>Certifications & Training</h2>
+            
+            <div style="margin-bottom: 30px;">
+                <h3 style="color: #1e3a8a; margin-bottom: 15px;">✅ Completed Certifications</h3>
+                <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; border-left: 4px solid #10b981;">
+                    <p style="font-size: 1.1em; margin-bottom: 10px;"><strong>Cisco Certified Network Associate (CCNA)</strong></p>
+                    <ul style="margin-left: 40px; line-height: 2;">
+                        <li>CCNA 1: Introduction to Networks</li>
+                        <li>CCNA 2: Switching, Routing, and Wireless Essentials</li>
+                        <li>CCNA 3: Enterprise Networking, Security, and Automation</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div>
+                <h3 style="color: #1e3a8a; margin-bottom: 15px;">📚 In Progress / Planned (2026)</h3>
+                <div style="background: #fef3c7; padding: 20px; border-radius: 8px; border-left: 4px solid #f59e0b;">
+                    <ul style="margin-left: 40px; line-height: 2;">
+                        <li><strong>CompTIA Security+</strong> - Currently Studying (Target: Q2 2026)</li>
+                        <li><strong>CompTIA CySA+</strong> - Planned Q2 2026</li>
+                        <li><strong>Security Blue Team Level 1 (BTL1)</strong> - Planned Q3 2026</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <h2>Get In Touch</h2>
+            <p style="font-size: 1.1em; margin-bottom: 30px;">I'm actively seeking opportunities in <strong>SOC Analyst</strong>, <strong>Security Analyst</strong>, or <strong>Junior Security Engineer</strong> roles. Open to relocation within Middle East, Europe, or North America.</p>
+            
+            <div class="contact-info">
+                <div class="contact-item">
+                    <h3>📧 Email</h3>
+                    <a href="mailto:husseinreslan265@gmail.com">husseinreslan265@gmail.com</a>
+                </div>
+
+                <div class="contact-item">
+                    <h3>📱 Phone</h3>
+                    <a href="tel:+96176760246">+961 76 760 246</a>
+                </div>
+
+                <div class="contact-item">
+                    <h3>💼 LinkedIn</h3>
+                    <a href="https://linkedin.com/in/hussein-reslan" target="_blank">linkedin.com/in/hussein-reslan</a>
+                </div>
+
+                <div class="contact-item">
+                    <h3>💻 GitHub</h3>
+                    <a href="https://github.com/hussein-reslan" target="_blank">github.com/hussein-reslan</a>
+                </div>
+            </div>
+
+            <div style="margin-top: 40px; padding: 25px; background: #f0f9ff; border-radius: 8px; text-align: center;">
+                <p style="font-size: 1.1em; color: #1e3a8a;"><strong>Location Preferences:</strong></p>
+                <p style="margin-top: 10px; font-size: 1.05em;">🇦🇪 UAE | 🇸🇦 Saudi Arabia | 🇶🇦 Qatar | 🇪🇺 Europe | 🇨🇦 Canada</p>
+                <p style="margin-top: 15px; color: #555;">Willing to relocate for the right opportunity</p>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Hussein Ali Reslan. All rights reserved.</p>
+        <p style="margin-top: 10px; font-size: 0.9em;">Portfolio last updated: February 2026</p>
+    </footer>
+</body>
+</html>
